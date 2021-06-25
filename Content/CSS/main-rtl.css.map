@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","Abstract/_variables.scss"],"names":[],"mappings":"AAGA,EACI,SCJW","file":"main-rtl.css","sourcesContent":["\r\n@import './Abstract/variables';\r\n\r\np {\r\n    color: $mainColor;\r\n}\r\n\r\n\r\n","$mainColor: red"]}
