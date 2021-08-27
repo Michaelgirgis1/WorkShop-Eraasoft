@@ -2,7 +2,21 @@
 @import './Abstract/variables';
 
 p {
-    color: $mainColor;
+    // color: $mainColor;
+    margin-#{$start}: 50px;
+    padding-#{$end}:50px ;
+
+    @if $direction == rtl {
+        color: red;
+        
+    } @else {
+        color: blue;
+    }
+}
+
+// cojnnnnnnn
+h1 {
+    color: $secondColor;
 }
 
 

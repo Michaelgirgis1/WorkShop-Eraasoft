@@ -1,2 +1,9 @@
 @import './Directions//ltr-direction';
-@import './main.scss'
+@import './main.scss';
+
+
+
+p {
+    color: $mainColor;
+    margin-left: 50px;
+}

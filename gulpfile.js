@@ -36,24 +36,6 @@ gulp.task('SassCompile', function () {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('Content/CSS'));
 });
-gulp.task('concatMinifyAllRtlCss', function () {
-
-    return gulp.src(['../Content/CSS/Vendor/rtl/bootstrapRTL.min.css', '../Content/CSS/Vendor/*.css', '../Content/CSS/main-rtl.css'])
-        .pipe(sourcemaps.init())
-        .pipe(concat('rtlMinStyle.min.css'))
-        .pipe(cleanCSS())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('../Content/CSS/minifiedStyles'));
-});
-gulp.task('concatMinifyAllLtrCss', function () {
-
-    return gulp.src(['../Content/CSS/Vendor/ltr/bootstrapLTR.min.css', '../Content/CSS/Vendor/*.css', '../Content/CSS/main-ltr.css'])
-        .pipe(sourcemaps.init())
-        .pipe(concat('ltrMinStyle.min.css'))
-        .pipe(cleanCSS())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('../Content/CSS/minifiedStyles'));
-});
 
 
 gulp.task('watch', function () {
@@ -62,3 +44,13 @@ gulp.task('watch', function () {
 
      //gulp.watch('Content/Scripts/Pages/*.js', gulp.series('jsCompress'));
 });
+
+
+
+// var gulp = require("gulp"),
+// concat= require('gulp-concat');
+// gulp.task("concatTwoFile", function(){
+//     return gulp.src(['Content/SASS/main-ltr.scss', 'Content/SASS/main-rtl.scss'])
+//     .pipe(concat("all.scss"))
+//     .pipe(gulp.dest("dist"))
+// })
